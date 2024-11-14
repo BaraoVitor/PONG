@@ -46,3 +46,19 @@ while running:
     for event in pygame .event.get():
         if event.type == pygame.QUIT:
             running = False
+#movimentaçao dos jogadores 
+keys = pygame.key.get_pressed()
+if keys(pygame.k_W) and player1y > 0:
+    player1y -= player_speed
+if keys(pygame.k_S) and player1y < HEIGHT - player_height:
+    player1y += player_speed
+        
+#player 2 
+keys = pygame.key.get_pressed()
+if keys(pygame.k_Up) and player2y > 0:
+    player2y -= player_speed
+if keys(pygame.k_Down) and player2y < HEIGHT - player_height:
+    player2y += player_speed
+
+#
+        
